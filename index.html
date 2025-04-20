@@ -3,41 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>北京2日游行程规划</title>
+    <title>北京二日游行程规划表</title>
     <style>
         body { font-family: '微软雅黑', Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 32px; }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 32px; }
         h1 { text-align: center; color: #2d3a4b; }
-        h2 { color: #1a73e8; margin-top: 32px; }
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 18px; }
-        .spot { font-weight: bold; color: #333; }
-        .restaurant { color: #e67e22; }
-        .time { color: #888; margin-right: 8px; }
-        .address { color: #888; font-size: 0.95em; }
-        .section { margin-bottom: 32px; }
+        .info-bar { display: flex; justify-content: space-between; background: #eaf3fb; padding: 12px 24px; border-radius: 6px; margin-bottom: 24px; }
+        .info-bar span { color: #1a73e8; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+        th, td { border: 1px solid #e0e0e0; padding: 10px; text-align: left; }
+        th { background: #f5f8fa; color: #1a73e8; }
+        .section-title { color: #1a73e8; margin: 32px 0 16px 0; font-size: 1.2em; }
+        .route-map { text-align: center; margin: 18px 0; }
+        .tips, .food, .traffic { display: inline-block; vertical-align: top; width: 48%; margin-bottom: 24px; }
+        .tips ul, .food ul, .traffic ul { padding-left: 20px; }
+        .food { margin-left: 4%; }
+        @media (max-width: 700px) {
+            .tips, .food, .traffic { width: 100%; margin-left: 0; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>北京2日游行程规划</h1>
-        <div class="section">
-            <h2>第1天</h2>
+        <h1>北京二日游行程规划表</h1>
+        <div class="info-bar">
+            <div>日期：2025年4月20日（示例）</div>
+            <div>旅行者：__________</div>
+            <div>天气：晴 13~7℃</div>
+        </div>
+        <div class="section-title">第1天行程安排</div>
+        <table>
+            <tr><th>时间</th><th>地点</th><th>活动详情</th><th>备注</th></tr>
+            <tr><td>09:00-11:00</td><td>天安门广场/故宫博物院</td><td>参观天安门、游览故宫，感受皇家文化</td><td>建议提前预约门票</td></tr>
+            <tr><td>11:00-12:00</td><td>步行至北海公园</td><td>沿途欣赏中轴线风光</td><td>步行约1小时</td></tr>
+            <tr><td>12:00-13:00</td><td>北海公园</td><td>游园、拍照、休息</td><td>门票：10元</td></tr>
+            <tr><td>13:00-14:00</td><td>步行至什刹海</td><td>沿途胡同风情</td><td>步行约1小时15分</td></tr>
+            <tr><td>14:00-15:00</td><td>什刹海-后海</td><td>体验老北京水域风情</td><td>可乘坐游船</td></tr>
+            <tr><td>15:00-15:20</td><td>步行至南锣鼓巷</td><td>胡同漫步</td><td>步行约13分钟</td></tr>
+            <tr><td>15:20-16:30</td><td>南锣鼓巷</td><td>逛特色小店、品尝小吃</td><td>自由活动</td></tr>
+            <tr><td>16:30-17:10</td><td>步行至四季民福烤鸭店</td><td>前往餐厅</td><td>步行约38分钟</td></tr>
+            <tr><td>17:10-18:30</td><td>四季民福烤鸭店(故宫店)</td><td>享用北京烤鸭</td><td>建议提前预约</td></tr>
+        </table>
+        <div class="section-title">路线图（示例）</div>
+        <div class="route-map">
+            <!-- 高德地图步行路线嵌入示例，可替换为实际API生成的URL -->
+            <iframe src="https://uri.amap.com/navigation?from=116.397455,39.909187,天安门&to=116.397029,39.917839,故宫博物院&mode=walk&policy=1&src=yourAppName&coordinate=gaode&callnative=0" width="90%" height="320" frameborder="0" allowfullscreen></iframe>
+            <br>天安门 → 故宫步行导航
+        </div>
+        <div class="route-map">
+            <iframe src="https://uri.amap.com/navigation?from=116.397029,39.917839,故宫博物院&to=116.439004,39.921081,北海公园&mode=walk&policy=1&src=yourAppName&coordinate=gaode&callnative=0" width="90%" height="320" frameborder="0" allowfullscreen></iframe>
+            <br>故宫 → 北海公园步行导航
+        </div>
+        <div class="route-map">
+            <iframe src="https://uri.amap.com/navigation?from=116.439004,39.921081,北海公园&to=116.395411,39.939538,什刹海&mode=walk&policy=1&src=yourAppName&coordinate=gaode&callnative=0" width="90%" height="320" frameborder="0" allowfullscreen></iframe>
+            <br>北海公园 → 什刹海步行导航
+        </div>
+        <div class="route-map">
+            <iframe src="https://uri.amap.com/navigation?from=116.395411,39.939538,什刹海&to=116.403145,39.936302,南锣鼓巷&mode=walk&policy=1&src=yourAppName&coordinate=gaode&callnative=0" width="90%" height="320" frameborder="0" allowfullscreen></iframe>
+            <br>什刹海 → 南锣鼓巷步行导航
+        </div>
+        <div class="route-map">
+            <iframe src="https://uri.amap.com/navigation?from=116.403145,39.936302,南锣鼓巷&to=116.402907,39.914656,四季民福烤鸭店&mode=walk&policy=1&src=yourAppName&coordinate=gaode&callnative=0" width="90%" height="320" frameborder="0" allowfullscreen></iframe>
+            <br>南锣鼓巷 → 四季民福烤鸭店步行导航
+        </div>
+        <div class="section-title">餐饮推荐</div>
+        <div class="food">
             <ul>
-                <li><span class="time">上午</span><span class="spot">天安门广场、故宫博物院</span></li>
-                <li><span class="time">中午</span><span class="restaurant">四季民福烤鸭店(故宫店)</span> <span class="address">南池子大街11号</span></li>
-                <li><span class="time">下午</span><span class="spot">北海公园、什刹海-后海</span></li>
-                <li><span class="time">傍晚</span><span class="spot">南锣鼓巷</span></li>
-                <li><span class="time">晚餐</span><span class="restaurant">日昌餐馆(地安门店)</span> <span class="address">地安门西大街14号</span></li>
+                <li><b>四季民福烤鸭店(故宫店)</b>：南池子大街11号，招牌菜：烤鸭</li>
+                <li><b>日昌餐馆(地安门店)</b>：地安门西大街14号，招牌菜：小笼包</li>
             </ul>
         </div>
-        <div class="section">
-            <h2>第2天</h2>
+        <div class="section-title">实用提示</div>
+        <div class="tips">
             <ul>
-                <li><span class="time">上午</span><span class="spot">颐和园</span></li>
-                <li><span class="time">中午</span><span class="restaurant">文昌阁快餐厅</span> <span class="address">新建宫门路19号颐和园内(东南角)</span></li>
-                <li><span class="time">下午</span><span class="spot">八达岭长城</span></li>
-                <li><span class="time">晚餐</span><span class="restaurant">客栈餐厅</span> <span class="address">八达岭路京张高铁八达岭长城站向北400米</span></li>
+                <li>建议提前预约热门景点门票</li>
+                <li>步行较多，建议穿舒适鞋子</li>
+                <li>可使用高德地图APP实时导航</li>
+                <li>注意防晒和补水</li>
+            </ul>
+        </div>
+        <div class="section-title">交通换乘说明</div>
+        <div class="traffic">
+            <ul>
+                <li>如需节省体力，可适当选择地铁/公交，推荐地铁1号线、6号线等</li>
+                <li>各景点间步行均有高德地图导航支持</li>
             </ul>
         </div>
         <div style="color:#888;font-size:0.95em;text-align:center;">如需更多定制行程，可随时联系！</div>
